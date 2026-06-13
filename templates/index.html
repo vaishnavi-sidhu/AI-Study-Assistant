@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Study Assistant</title>
+</head>
+<body>
+
+    <h1>🧠 AI Study Assistant (Foundry IQ Style)</h1>
+
+    <form action="/ask" method="POST">
+        <input type="text" name="message" placeholder="Ask your question..." required>
+        <button type="submit">Ask</button>
+    </form>
+
+    <br>
+
+    <form action="/quiz" method="POST">
+        <input type="text" name="message" placeholder="Enter topic for quiz..." required>
+        <button type="submit">Generate Quiz</button>
+    </form>
+
+    <hr>
+
+    {% if answer %}
+        <pre>{{ answer }}</pre>
+    {% endif %}
+
+</body>
+</html>
